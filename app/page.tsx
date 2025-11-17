@@ -60,6 +60,54 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Contact & Info Banner */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+            {/* Location */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="text-2xl mb-2">📍</div>
+              <div>
+                <p className="font-semibold text-lg">Where</p>
+                <p className="text-blue-100">5 Armstrong Street</p>
+                <p className="text-blue-100">Suffolk</p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="text-2xl mb-2">🕒</div>
+              <div>
+                <p className="font-semibold text-lg">When</p>
+                <p className="text-blue-100">Monday - Friday</p>
+                <p className="text-blue-100">9:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="text-2xl mb-2">📞</div>
+              <div>
+                <p className="font-semibold text-lg">Contact</p>
+                <p className="text-blue-100">Call Rocco</p>
+                <a
+                  href="tel:0490038888"
+                  className="text-white font-semibold hover:text-blue-200 transition-colors text-lg"
+                >
+                  0490 038 888
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 text-center border-t border-white/20 pt-4">
+            <p className="text-blue-100 text-sm sm:text-base">
+              💡 Call ahead or drop in • All prices negotiable • Cash only
+            </p>
+          </div>
+        </div>
+      </div>
+
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Category Filter */}
         <div className="mb-8">
@@ -128,7 +176,7 @@ export default function Home() {
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-center text-gray-600 text-sm">
-            All prices negotiable • Cash only • First come, first served
+            5 Armstrong Street, Suffolk • Mon-Fri 9-5 • Call Rocco: 0490 038 888
           </p>
         </div>
       </footer>
