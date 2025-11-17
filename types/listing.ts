@@ -4,7 +4,9 @@ export interface Listing {
   price: number;
   description?: string;
   category: string;
-  image_url: string;
+  image_url: string; // Primary image (backward compatible)
+  images: string[]; // Array of all images
+  available_date?: string | null;
   created_at: string;
   sold?: boolean;
 }

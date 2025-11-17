@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Bosch Dryer",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Bosch Dryer.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Bosch Washing Machine",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Bosch Washing Machine.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Bunk Bed",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Bunk Bed.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Coffee Table",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Coffee Table 2.jpeg",
+      "/photos/Coffee Table.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Electric Drum Kit",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Electric Drum Kit.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Ikea Chair",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Ikea Chair 2.jpeg",
+      "/photos/Ikea Chair.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Ikea Daybed",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Ikea Daybed 2.jpeg",
+      "/photos/Ikea Daybed.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Ikea Stool",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Ikea Stool .jpeg",
+      "/photos/Ikea Stool 2.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Long Coffee Table",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Long Coffee Table 2.jpeg",
+      "/photos/Long Coffee Table.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Lounge Suite",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Lounge Suite 1.jpeg",
+      "/photos/Lounge Suite 2.jpeg",
+      "/photos/Lounge Suite 3.jpeg",
+      "/photos/Lounge Suite 4.jpeg",
+      "/photos/Lounge Suite 5.jpeg",
+      "/photos/Lounge Suite 6.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Stand up Desk",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Stand up Desk 3.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  },
+  {
+    "title": "Standup Desk",
+    "price": 0,
+    "description": "",
+    "category": "Other",
+    "images": [
+      "/photos/Standup Desk 2.jpeg",
+      "/photos/Standup Desk.jpeg"
+    ],
+    "available_date": null,
+    "sold": false
+  }
+]

@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-template": "tsx scripts/generate-listing-template.ts",
+    "import-listings": "tsx scripts/import-listings.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.81.1",
+    "dotenv": "^17.2.3",
     "next": "16.0.3",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "tsx": "^4.20.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -1,37 +1,32 @@
 'use client';
 
-import Image from 'next/image';
 import type { Listing } from '@/types/listing';
+import ImageGallery from './ImageGallery';
 
 interface ListingCardProps {
   listing: Listing;
 }
 
 export default function ListingCard({ listing }: ListingCardProps) {
+  // Use images array if available, fallback to image_url for backward compatibility
+  const images = listing.images && listing.images.length > 0
+    ? listing.images
+    : [listing.image_url];
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="relative w-full aspect-square">
-        <Image
-          src={listing.image_url}
-          alt={listing.title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        {listing.sold && (
-          <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-            <span className="text-white text-2xl font-bold px-6 py-3 bg-red-600 rounded-lg">
-              SOLD
-            </span>
-          </div>
-        )}
-      </div>
+      <ImageGallery
+        images={images}
+        title={listing.title}
+        sold={listing.sold}
+        availableDate={listing.available_date}
+      />
       <div className="p-4">
-        <h3 className="font-semibold text-lg text-gray-900 mb-2 line-clamp-2">
+        <h1 className="font-bold text-xl text-gray-900 mb-2 line-clamp-2">
           {listing.title}
-        </h3>
+        </h1>
         {listing.description && (
-          <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+          <p className="text-gray-600 text-sm mb-3 line-clamp-3">
             {listing.description}
           </p>
         )}
