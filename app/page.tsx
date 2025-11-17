@@ -29,6 +29,17 @@ export default function Home() {
 
   async function fetchListings() {
     try {
+      // Check if Supabase is configured
+      const isConfigured =
+        process.env.NEXT_PUBLIC_SUPABASE_URL &&
+        process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co';
+
+      if (!isConfigured) {
+        setError(null); // Don't show error, just empty state
+        setLoading(false);
+        return;
+      }
+
       const { data, error } = await supabase
         .from('listings')
         .select('*')
@@ -138,16 +149,60 @@ export default function Home() {
 
         {/* Empty State */}
         {!loading && !error && filteredListings.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">📦</div>
+          <div className="text-center py-12 max-w-2xl mx-auto">
+            <div className="text-6xl mb-4">
+              {process.env.NEXT_PUBLIC_SUPABASE_URL &&
+              process.env.NEXT_PUBLIC_SUPABASE_URL !==
+                'https://placeholder.supabase.co'
+                ? '📦'
+                : '👋'}
+            </div>
             <h3 className="text-xl font-semibold text-gray-700 mb-2">
-              No items found
+              {process.env.NEXT_PUBLIC_SUPABASE_URL &&
+              process.env.NEXT_PUBLIC_SUPABASE_URL !==
+                'https://placeholder.supabase.co'
+                ? selectedCategory === 'All'
+                  ? 'No items found'
+                  : `No items in ${selectedCategory}`
+                : 'Welcome to Your Garage Sale Website!'}
             </h3>
-            <p className="text-gray-600">
-              {selectedCategory === 'All'
-                ? 'No listings yet. Start adding items to your garage sale!'
-                : `No items in the ${selectedCategory} category.`}
+            <p className="text-gray-600 mb-4">
+              {process.env.NEXT_PUBLIC_SUPABASE_URL &&
+              process.env.NEXT_PUBLIC_SUPABASE_URL !==
+                'https://placeholder.supabase.co'
+                ? selectedCategory === 'All'
+                  ? 'Start adding items to your garage sale!'
+                  : `Try selecting a different category.`
+                : 'This is what your garage sale site looks like! To add items and make it functional:'}
             </p>
+            {(!process.env.NEXT_PUBLIC_SUPABASE_URL ||
+              process.env.NEXT_PUBLIC_SUPABASE_URL ===
+                'https://placeholder.supabase.co') && (
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-left">
+                <h4 className="font-semibold text-blue-900 mb-3">
+                  Quick Setup (5 minutes):
+                </h4>
+                <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
+                  <li>
+                    Create a free Supabase account at{' '}
+                    <span className="font-mono bg-blue-100 px-1 rounded">
+                      supabase.com
+                    </span>
+                  </li>
+                  <li>Run the SQL from SETUP.md to create the listings table</li>
+                  <li>
+                    Copy your credentials to{' '}
+                    <span className="font-mono bg-blue-100 px-1 rounded">
+                      .env.local
+                    </span>
+                  </li>
+                  <li>Add photos to the photos folder and create listings</li>
+                </ol>
+                <p className="text-xs text-blue-700 mt-4">
+                  See QUICKSTART.md for detailed instructions
+                </p>
+              </div>
+            )}
           </div>
         )}
 
