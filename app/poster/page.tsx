@@ -1,11 +1,20 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 export default function PosterPage() {
+  const [mounted, setMounted] = useState(false);
+
   const categories = [
     'Electronics', 'Furniture', 'Appliances', 'Chairs',
     'Desks', 'Tables', 'Beds', 'Stools',
     'Washing Machine', 'Dryer', 'Drum Kit', 'Lounge Suite'
   ];
+
+  // Only render word cloud on client side to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100 p-8 print:p-0">
@@ -72,31 +81,33 @@ export default function PosterPage() {
           <div className="flex-1 flex items-center justify-center relative">
 
             {/* Word Cloud around QR */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              {categories.map((word, index) => {
-                const angle = (index / categories.length) * 2 * Math.PI;
-                const radius = 180;
-                const x = Math.cos(angle) * radius;
-                const y = Math.sin(angle) * radius;
-                const size = 14 + Math.random() * 16;
+            {mounted && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                {categories.map((word, index) => {
+                  const angle = (index / categories.length) * 2 * Math.PI;
+                  const radius = 180;
+                  const x = Math.cos(angle) * radius;
+                  const y = Math.sin(angle) * radius;
+                  const size = 14 + Math.random() * 16;
 
-                return (
-                  <div
-                    key={word}
-                    className="absolute text-white/80 font-bold"
-                    style={{
-                      transform: `translate(${x}px, ${y}px) rotate(${Math.random() * 20 - 10}deg)`,
-                      fontSize: `${size}px`,
-                      fontFamily: '"Montserrat", sans-serif',
-                      textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                      color: Math.random() > 0.3 ? '#fff' : '#ffd700'
-                    }}
-                  >
-                    {word}
-                  </div>
-                );
-              })}
-            </div>
+                  return (
+                    <div
+                      key={word}
+                      className="absolute text-white/80 font-bold"
+                      style={{
+                        transform: `translate(${x}px, ${y}px) rotate(${Math.random() * 20 - 10}deg)`,
+                        fontSize: `${size}px`,
+                        fontFamily: '"Montserrat", sans-serif',
+                        textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+                        color: Math.random() > 0.3 ? '#fff' : '#ffd700'
+                      }}
+                    >
+                      {word}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
 
             {/* QR Code Container */}
             <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl">
