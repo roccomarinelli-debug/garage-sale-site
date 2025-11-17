@@ -1,3 +1,5 @@
+'use client';
+
 export default function PosterPage() {
   const categories = [
     'Electronics', 'Furniture', 'Appliances', 'Chairs',
