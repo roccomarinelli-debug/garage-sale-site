@@ -1,9 +1,9 @@
 [
   {
     "title": "Bosch Dryer",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 350.00,
+    "description": "Excellent condition Bosch dryer, energy efficient, barely used",
+    "category": "Electronics",
     "images": [
       "/photos/Bosch Dryer.jpeg"
     ],
@@ -12,9 +12,9 @@
   },
   {
     "title": "Bosch Washing Machine",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 400.00,
+    "description": "Matching Bosch washing machine, works perfectly, front loader",
+    "category": "Electronics",
     "images": [
       "/photos/Bosch Washing Machine.jpeg"
     ],
@@ -23,9 +23,9 @@
   },
   {
     "title": "Bunk Bed",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 250.00,
+    "description": "Solid timber bunk bed, great for kids room",
+    "category": "Furniture",
     "images": [
       "/photos/Bunk Bed.jpeg"
     ],
@@ -34,9 +34,9 @@
   },
   {
     "title": "Coffee Table",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 120.00,
+    "description": "Modern coffee table with storage, perfect for living room",
+    "category": "Furniture",
     "images": [
       "/photos/Coffee Table 2.jpeg",
       "/photos/Coffee Table.jpeg"
@@ -46,20 +46,20 @@
   },
   {
     "title": "Electric Drum Kit",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 450.00,
+    "description": "Full electronic drum kit with headphone jack, perfect for practice",
+    "category": "Electronics",
     "images": [
       "/photos/Electric Drum Kit.jpeg"
     ],
-    "available_date": null,
+    "available_date": "2025-12-15",
     "sold": false
   },
   {
     "title": "Ikea Chair",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 45.00,
+    "description": "Comfortable Ikea dining chair, modern design",
+    "category": "Furniture",
     "images": [
       "/photos/Ikea Chair 2.jpeg",
       "/photos/Ikea Chair.jpeg"
@@ -69,9 +69,9 @@
   },
   {
     "title": "Ikea Daybed",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 180.00,
+    "description": "Ikea daybed with pull-out trundle, great for guests",
+    "category": "Furniture",
     "images": [
       "/photos/Ikea Daybed 2.jpeg",
       "/photos/Ikea Daybed.jpeg"
@@ -81,9 +81,9 @@
   },
   {
     "title": "Ikea Stool",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 25.00,
+    "description": "Simple Ikea stool, perfect for kitchen or bar",
+    "category": "Furniture",
     "images": [
       "/photos/Ikea Stool .jpeg",
       "/photos/Ikea Stool 2.jpeg"
@@ -93,9 +93,9 @@
   },
   {
     "title": "Long Coffee Table",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 150.00,
+    "description": "Long modern coffee table, great for larger living spaces",
+    "category": "Furniture",
     "images": [
       "/photos/Long Coffee Table 2.jpeg",
       "/photos/Long Coffee Table.jpeg"
@@ -105,9 +105,9 @@
   },
   {
     "title": "Lounge Suite",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 650.00,
+    "description": "Beautiful 3-piece lounge suite in excellent condition, very comfortable",
+    "category": "Furniture",
     "images": [
       "/photos/Lounge Suite 1.jpeg",
       "/photos/Lounge Suite 2.jpeg",
@@ -121,9 +121,9 @@
   },
   {
     "title": "Stand up Desk",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 320.00,
+    "description": "Electric height-adjustable standing desk, perfect for home office",
+    "category": "Furniture",
     "images": [
       "/photos/Stand up Desk 3.jpeg"
     ],
@@ -132,9 +132,9 @@
   },
   {
     "title": "Standup Desk",
-    "price": 0,
-    "description": "",
-    "category": "Other",
+    "price": 280.00,
+    "description": "Manual height-adjustable standing desk, sturdy and reliable",
+    "category": "Furniture",
     "images": [
       "/photos/Standup Desk 2.jpeg",
       "/photos/Standup Desk.jpeg"
