@@ -64,18 +64,17 @@ export default function PosterPage() {
                  fontFamily: '"Montserrat", sans-serif',
                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                }}>
-              Moving Overseas Sale - Great Stuff!
+              Moving Overseas - Great Stuff on Offer!
             </p>
           </div>
 
           {/* Address Section */}
           <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-5 mb-6">
-            <p className="text-center text-white text-xl font-semibold"
+            <p className="text-center text-white font-semibold"
                style={{fontFamily: '"Montserrat", sans-serif'}}>
-              📍 <span className="font-bold">Address:</span><br/>
+              <span className="text-4xl">📌</span><br/>
               <span className="text-3xl font-black text-white">
-                5 Armstrong Street<br/>
-                Suffolk Park
+                5 Armstrong, Suffolk
               </span>
             </p>
           </div>
@@ -142,10 +141,8 @@ export default function PosterPage() {
                  fontFamily: '"Montserrat", sans-serif',
                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                }}>
-              📞 Call Rocco: <span className="text-white">0490 038 888</span>
-            </p>
-            <p className="text-white/90 text-lg font-semibold">
-              Mon-Fri 9am-5pm • Sat 9am-12pm
+              📱 <span className="font-semibold">When:</span> Text <span className="text-white font-black">0490 038 888</span><br/>
+              <span className="text-lg">to arrange drop in time</span>
             </p>
             <p className="text-white/80 text-base">
               All prices negotiable • Cash & Bank Transfers
