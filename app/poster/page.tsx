@@ -27,50 +27,41 @@ export default function PosterPage() {
              overflow: 'hidden'
            }}>
 
-        {/* Purple Gradient Background with Gold Flecks */}
+        {/* Purple Gradient Background */}
         <div className="absolute inset-0"
              style={{
                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
              }}>
-          {/* Gold Flecks */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-20 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-            <div className="absolute top-40 right-16 w-3 h-3 bg-yellow-300 rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
-            <div className="absolute bottom-32 left-32 w-2 h-2 bg-yellow-400 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
-            <div className="absolute top-1/2 right-24 w-2 h-2 bg-yellow-300 rounded-full animate-pulse" style={{animationDelay: '0.9s'}}></div>
-            <div className="absolute bottom-20 right-40 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" style={{animationDelay: '1.2s'}}></div>
-            <div className="absolute top-24 left-1/2 w-2 h-2 bg-yellow-300 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
-          </div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col p-12">
+        <div className="relative z-10 h-full flex flex-col p-6">
 
           {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-7xl font-black text-white mb-4 tracking-tight"
+          <div className="text-center mb-6">
+            <h1 className="text-6xl font-black text-white mb-3 tracking-tight"
                 style={{
                   fontFamily: '"Bebas Neue", "Impact", sans-serif',
-                  textShadow: '4px 4px 8px rgba(0,0,0,0.3), 0 0 40px rgba(255,215,0,0.3)',
+                  textShadow: '4px 4px 8px rgba(0,0,0,0.3)',
                   letterSpacing: '0.05em'
                 }}>
-              SUPER<br/>GARAGE SALE
+              SUPER GARAGE SALE
             </h1>
-            <p className="text-3xl font-bold text-yellow-300"
+            <p className="text-2xl font-bold text-white"
                style={{
                  fontFamily: '"Montserrat", sans-serif',
                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                }}>
-              Great Stuff, Great Prices
+              Moving Overseas Sale - Great Stuff!
             </p>
           </div>
 
           {/* Address Section */}
-          <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6 mb-8">
-            <p className="text-center text-white text-2xl font-semibold"
+          <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-5 mb-6">
+            <p className="text-center text-white text-xl font-semibold"
                style={{fontFamily: '"Montserrat", sans-serif'}}>
               📍 <span className="font-bold">Address:</span><br/>
-              <span className="text-3xl font-black text-yellow-300">
+              <span className="text-3xl font-black text-white">
                 5 Armstrong Street<br/>
                 Suffolk Park
               </span>
@@ -99,7 +90,7 @@ export default function PosterPage() {
                         fontSize: `${size}px`,
                         fontFamily: '"Montserrat", sans-serif',
                         textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                        color: Math.random() > 0.3 ? '#fff' : '#ffd700'
+                        color: '#fff'
                       }}
                     >
                       {word}
@@ -110,35 +101,35 @@ export default function PosterPage() {
             )}
 
             {/* QR Code Container */}
-            <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl">
-              <div className="mb-4">
+            <div className="relative z-10 bg-white p-6 rounded-3xl shadow-2xl">
+              <h2 className="text-center text-purple-900 font-black text-xl mb-4"
+                  style={{fontFamily: '"Montserrat", sans-serif', letterSpacing: '0.05em'}}>
+                SCAN TO SEE ALL THE<br/>GREAT STUFF FOR SALE
+              </h2>
+              <div>
                 <img
                   src="/qr-code.svg"
                   alt="Scan to browse items"
                   className="w-64 h-64"
                 />
               </div>
-              <p className="text-center text-purple-900 font-bold text-lg"
-                 style={{fontFamily: '"Montserrat", sans-serif'}}>
-                👆 SCAN TO BROWSE
-              </p>
             </div>
           </div>
 
           {/* Footer Info */}
-          <div className="text-center mt-8 space-y-2">
+          <div className="text-center mt-6 space-y-2">
             <p className="text-white text-xl font-bold"
                style={{
                  fontFamily: '"Montserrat", sans-serif',
                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                }}>
-              📞 Call Rocco: <span className="text-yellow-300">0490 038 888</span>
+              📞 Call Rocco: <span className="text-white">0490 038 888</span>
             </p>
             <p className="text-white/90 text-lg font-semibold">
-              Mon-Fri 9AM-5PM • Cash & Bank Transfers
+              Mon-Fri 9am-5pm • Sat 9am-12pm
             </p>
             <p className="text-white/80 text-base">
-              All prices negotiable • Call ahead or drop in
+              All prices negotiable • Cash & Bank Transfers
             </p>
           </div>
         </div>
