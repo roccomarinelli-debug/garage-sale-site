@@ -76,10 +76,10 @@ export default function PosterPage() {
               <>
                 {categories.map((word, index) => {
                   const angle = (index / categories.length) * 2 * Math.PI;
-                  const radius = 380;
+                  const radius = 310;
                   const x = Math.cos(angle) * radius;
                   const y = Math.sin(angle) * radius;
-                  const size = 20 + Math.random() * 22;
+                  const size = 19 + Math.random() * 20;
 
                   return (
                     <div
