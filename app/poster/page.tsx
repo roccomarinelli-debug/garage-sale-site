@@ -70,9 +70,9 @@ export default function PosterPage() {
 
           {/* Address Section */}
           <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-5 mb-6">
-            <p className="text-center text-white font-semibold"
+            <p className="text-center text-white font-semibold flex items-center justify-center gap-3"
                style={{fontFamily: '"Montserrat", sans-serif'}}>
-              <span className="text-4xl">📌</span><br/>
+              <span className="text-4xl">📌</span>
               <span className="text-3xl font-black text-white">
                 5 Armstrong, Suffolk
               </span>
