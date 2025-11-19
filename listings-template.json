@@ -1,8 +1,8 @@
 [
   {
     "title": "Bosch Dryer",
-    "price": 350.00,
-    "description": "Excellent condition Bosch dryer, energy efficient, barely used",
+    "price": 600.00,
+    "description": "2019 Bosch Serie 6 dryer, excellent condition, energy efficient",
     "category": "Electronics",
     "images": [
       "/photos/Bosch Dryer.jpeg"
@@ -12,8 +12,8 @@
   },
   {
     "title": "Bosch Washing Machine",
-    "price": 400.00,
-    "description": "Matching Bosch washing machine, works perfectly, front loader",
+    "price": 750.00,
+    "description": "2018 Bosch Serie 8 washing machine, works perfectly, front loader",
     "category": "Electronics",
     "images": [
       "/photos/Bosch Washing Machine.jpeg"
@@ -23,7 +23,7 @@
   },
   {
     "title": "Bunk Bed",
-    "price": 250.00,
+    "price": 150.00,
     "description": "Solid timber bunk bed, great for kids room",
     "category": "Furniture",
     "images": [
@@ -34,7 +34,7 @@
   },
   {
     "title": "Coffee Table",
-    "price": 120.00,
+    "price": 50.00,
     "description": "Modern coffee table with storage, perfect for living room",
     "category": "Furniture",
     "images": [
@@ -46,8 +46,8 @@
   },
   {
     "title": "Electric Drum Kit",
-    "price": 450.00,
-    "description": "Full electronic drum kit with headphone jack, perfect for practice",
+    "price": 70.00,
+    "description": "Aldi electronic drum kit with headphone jack, perfect for practice",
     "category": "Electronics",
     "images": [
       "/photos/Electric Drum Kit.jpeg"
@@ -56,9 +56,9 @@
     "sold": false
   },
   {
-    "title": "Ikea Chair",
-    "price": 45.00,
-    "description": "Comfortable Ikea dining chair, modern design",
+    "title": "Ikea Chair (x2 available)",
+    "price": 15.00,
+    "description": "Comfortable Ikea dining chair, modern design. 2 available at $15 each.",
     "category": "Furniture",
     "images": [
       "/photos/Ikea Chair 2.jpeg",
@@ -69,7 +69,7 @@
   },
   {
     "title": "Ikea Daybed",
-    "price": 180.00,
+    "price": 150.00,
     "description": "Ikea daybed with pull-out trundle, great for guests",
     "category": "Furniture",
     "images": [
@@ -80,9 +80,9 @@
     "sold": false
   },
   {
-    "title": "Ikea Stool",
-    "price": 25.00,
-    "description": "Simple Ikea stool, perfect for kitchen or bar",
+    "title": "Ikea Stool (x3 available)",
+    "price": 20.00,
+    "description": "Simple Ikea stool, perfect for kitchen or bar. 3 available at $20 each.",
     "category": "Furniture",
     "images": [
       "/photos/Ikea Stool .jpeg",
@@ -93,7 +93,7 @@
   },
   {
     "title": "Long Coffee Table",
-    "price": 150.00,
+    "price": 50.00,
     "description": "Long modern coffee table, great for larger living spaces",
     "category": "Furniture",
     "images": [
@@ -120,20 +120,9 @@
     "sold": false
   },
   {
-    "title": "Stand up Desk",
-    "price": 320.00,
-    "description": "Electric height-adjustable standing desk, perfect for home office",
-    "category": "Furniture",
-    "images": [
-      "/photos/Stand up Desk 3.jpeg"
-    ],
-    "available_date": null,
-    "sold": false
-  },
-  {
     "title": "Standup Desk",
     "price": 280.00,
-    "description": "Manual height-adjustable standing desk, sturdy and reliable",
+    "description": "Height-adjustable standing desk, sturdy and reliable",
     "category": "Furniture",
     "images": [
       "/photos/Standup Desk 2.jpeg",
