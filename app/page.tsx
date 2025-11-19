@@ -61,7 +61,7 @@ export default function Home() {
       <header className="bg-white shadow-md sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2 uppercase">
               Super Garage Sale
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 font-medium">
@@ -74,50 +74,45 @@ export default function Home() {
       {/* Contact & Info Banner - Reduced height */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {/* Location */}
-            <div className="flex flex-col items-center md:items-start">
-              <div className="text-xl mb-1">📍</div>
-              <div>
-                <p className="font-semibold">Where</p>
-                <a
-                  href="https://maps.google.com/?q=5+Armstrong+Street+Suffolk+VIC"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-100 hover:text-white transition-colors text-sm"
-                >
-                  5 Armstrong Street, Suffolk
-                </a>
-              </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl mb-2">📍</div>
+              <a
+                href="https://maps.google.com/?q=5+Armstrong+Street+Suffolk+VIC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-100 transition-colors text-sm font-medium"
+              >
+                5 Armstrong Street, Suffolk
+              </a>
             </div>
 
             {/* Hours */}
-            <div className="flex flex-col items-center md:items-start">
-              <div className="text-xl mb-1">🕒</div>
-              <div>
-                <p className="font-semibold">When</p>
-                <p className="text-blue-100 text-sm">Mon-Fri 9AM-5PM</p>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl mb-2">🕒</div>
+              <div className="text-sm">
+                <p className="text-white font-medium">Mon-Fri 9am-5pm</p>
+                <p className="text-white font-medium">Sat 9am-12pm</p>
+                <p className="text-blue-100 text-xs mt-1">Call ahead for drop ins at other times</p>
               </div>
             </div>
 
             {/* Contact */}
-            <div className="flex flex-col items-center md:items-start">
-              <div className="text-xl mb-1">📞</div>
-              <div>
-                <p className="font-semibold">Contact</p>
-                <a
-                  href="tel:0490038888"
-                  className="text-white font-semibold hover:text-blue-200 transition-colors"
-                >
-                  0490 038 888
-                </a>
-              </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl mb-2">📞</div>
+              <a
+                href="tel:0490038888"
+                className="text-white font-semibold text-lg hover:text-blue-100 transition-colors"
+              >
+                0490 038 888
+              </a>
             </div>
           </div>
 
-          <div className="mt-3 text-center border-t border-white/20 pt-2">
-            <p className="text-blue-100 text-xs sm:text-sm">
-              💡 Call ahead or drop in • All prices negotiable • Cash and bank transfers
+          <div className="mt-4 text-center border-t border-white/20 pt-3">
+            <p className="text-blue-100 text-sm">
+              We're moving overseas on the 22nd December so some items aren't available until closer to then
             </p>
           </div>
         </div>
