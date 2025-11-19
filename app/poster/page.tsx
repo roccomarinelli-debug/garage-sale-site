@@ -5,10 +5,22 @@ import { useState, useEffect } from 'react';
 export default function PosterPage() {
   const [mounted, setMounted] = useState(false);
 
+  // Categories with popularity scores (1-5, higher = more popular)
   const categories = [
-    'Electronics', 'Furniture', 'Appliances', 'Chairs',
-    'Desks', 'Tables', 'Beds', 'Stools',
-    'Washing Machine', 'Dryer', 'Drum Kit', 'Lounge Suite'
+    { word: 'Coffee Tables', popularity: 5 },
+    { word: 'Gym Equipment', popularity: 5 },
+    { word: 'Bunk Bed', popularity: 5 },
+    { word: 'Table', popularity: 4 },
+    { word: 'Sit/Stand Desks', popularity: 4 },
+    { word: 'Washing Machine', popularity: 4 },
+    { word: 'Day Bed', popularity: 3 },
+    { word: 'Wicker Lounge', popularity: 3 },
+    { word: 'Dryer', popularity: 3 },
+    { word: 'Furniture', popularity: 3 },
+    { word: 'Lamp', popularity: 2 },
+    { word: 'Dehydrator', popularity: 2 },
+    { word: 'Drum Kit', popularity: 2 },
+    { word: 'Electronics', popularity: 2 }
   ];
 
   // Only render word cloud on client side to avoid hydration mismatch
@@ -74,29 +86,33 @@ export default function PosterPage() {
             {/* Word Cloud around QR */}
             {mounted && (
               <>
-                {categories.map((word, index) => {
+                {categories.map((item, index) => {
                   const angle = (index / categories.length) * 2 * Math.PI;
                   const radius = 310;
                   const x = Math.cos(angle) * radius;
                   const y = Math.sin(angle) * radius;
-                  const size = 19 + Math.random() * 20;
+                  // Size based on popularity: 14-38px range
+                  const baseSize = 14 + (item.popularity * 4.8);
+                  const size = baseSize + Math.random() * 6;
 
                   return (
                     <div
-                      key={word}
-                      className="absolute text-white font-bold"
+                      key={item.word}
+                      className="absolute text-white font-black"
                       style={{
                         left: '50%',
                         top: '50%',
                         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(${Math.random() * 20 - 10}deg)`,
                         fontSize: `${size}px`,
-                        fontFamily: '"Montserrat", sans-serif',
+                        fontFamily: '"Bebas Neue", "Impact", sans-serif',
                         textShadow: '3px 3px 6px rgba(0,0,0,0.7)',
                         color: '#fff',
-                        zIndex: 1
+                        zIndex: 1,
+                        letterSpacing: '0.05em',
+                        textTransform: 'uppercase'
                       }}
                     >
-                      {word}
+                      {item.word}
                     </div>
                   );
                 })}
