@@ -2,7 +2,7 @@ import QRCode from 'qrcode';
 import fs from 'fs';
 import path from 'path';
 
-const websiteUrl = 'https://garage-sale-site.netlify.app'; // Update this when deployed
+const websiteUrl = 'https://garage-sale-suffolk.netlify.app';
 
 async function generateQR() {
   try {
