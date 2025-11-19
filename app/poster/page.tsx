@@ -73,31 +73,34 @@ export default function PosterPage() {
 
             {/* Word Cloud around QR */}
             {mounted && (
-              <div className="absolute inset-0 flex items-center justify-center z-0">
+              <>
                 {categories.map((word, index) => {
                   const angle = (index / categories.length) * 2 * Math.PI;
-                  const radius = 200;
+                  const radius = 280;
                   const x = Math.cos(angle) * radius;
                   const y = Math.sin(angle) * radius;
-                  const size = 16 + Math.random() * 18;
+                  const size = 18 + Math.random() * 20;
 
                   return (
                     <div
                       key={word}
-                      className="absolute text-white/90 font-bold"
+                      className="absolute text-white font-bold"
                       style={{
-                        transform: `translate(${x}px, ${y}px) rotate(${Math.random() * 20 - 10}deg)`,
+                        left: '50%',
+                        top: '50%',
+                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(${Math.random() * 20 - 10}deg)`,
                         fontSize: `${size}px`,
                         fontFamily: '"Montserrat", sans-serif',
-                        textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                        color: '#fff'
+                        textShadow: '3px 3px 6px rgba(0,0,0,0.7)',
+                        color: '#fff',
+                        zIndex: 1
                       }}
                     >
                       {word}
                     </div>
                   );
                 })}
-              </div>
+              </>
             )}
 
             {/* QR Code Container */}
