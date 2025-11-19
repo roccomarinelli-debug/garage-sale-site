@@ -73,23 +73,23 @@ export default function PosterPage() {
 
             {/* Word Cloud around QR */}
             {mounted && (
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center z-0">
                 {categories.map((word, index) => {
                   const angle = (index / categories.length) * 2 * Math.PI;
-                  const radius = 180;
+                  const radius = 200;
                   const x = Math.cos(angle) * radius;
                   const y = Math.sin(angle) * radius;
-                  const size = 14 + Math.random() * 16;
+                  const size = 16 + Math.random() * 18;
 
                   return (
                     <div
                       key={word}
-                      className="absolute text-white/80 font-bold"
+                      className="absolute text-white/90 font-bold"
                       style={{
                         transform: `translate(${x}px, ${y}px) rotate(${Math.random() * 20 - 10}deg)`,
                         fontSize: `${size}px`,
                         fontFamily: '"Montserrat", sans-serif',
-                        textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                         color: '#fff'
                       }}
                     >
@@ -101,7 +101,7 @@ export default function PosterPage() {
             )}
 
             {/* QR Code Container */}
-            <div className="relative z-10 bg-white p-6 rounded-3xl shadow-2xl">
+            <div className="relative z-20 bg-white p-6 rounded-3xl shadow-2xl">
               <h2 className="text-center text-purple-900 font-black text-xl mb-4"
                   style={{fontFamily: '"Montserrat", sans-serif', letterSpacing: '0.05em'}}>
                 SCAN TO SEE ALL THE<br/>GREAT STUFF FOR SALE
