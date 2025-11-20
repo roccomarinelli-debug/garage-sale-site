@@ -109,10 +109,16 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="mt-4 text-center border-t border-white/20 pt-3">
-            <p className="text-blue-100 text-sm">
-              We're moving overseas on the 22nd December so some items aren't available until closer to then
+      {/* Moving Notice Banner */}
+      <div className="bg-orange-500 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-xl">📦</span>
+            <p className="text-sm sm:text-base font-semibold text-center">
+              We are moving out on 21 December so some items not available until the day before
             </p>
           </div>
         </div>
