@@ -40,9 +40,9 @@ export default function ImageGallery({
           priority={currentIndex === 0}
         />
 
-        {/* Availability Badge - Top Right */}
+        {/* Availability Badge - Top Left */}
         {isAvailableSoon && (
-          <div className="absolute top-3 right-3 bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10">
+          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10">
             Available {formattedAvailableDate}
           </div>
         )}
