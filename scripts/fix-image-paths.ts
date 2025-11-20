@@ -10,19 +10,19 @@ const supabase = createClient(
 
 const imageUpdates = [
   { title: 'BMX Bike', newPath: '/photos/BMX.jpeg' },
-  { title: 'Box of Lego', newPath: '/photos/Box o leggo.jpeg' },
-  { title: 'Childrens Bike', newPath: '/photos/Childrens Bike.jpeg' },
+  { title: 'Box of Lego', newPath: '/photos/Box_o_leggo.jpeg' },
+  { title: 'Childrens Bike', newPath: '/photos/Childrens_Bike.jpeg' },
   { title: 'Wall Clock', newPath: '/photos/Clock.jpeg' },
   { title: 'Dehydrator', newPath: '/photos/Dehydrator.jpeg' },
-  { title: 'Finska Game', newPath: '/photos/Finska Game.jpeg' },
-  { title: 'High Table', newPath: '/photos/High Table.jpeg' },
-  { title: 'Philips Sodastream', newPath: '/photos/Phillips Sodastream.jpeg' },
-  { title: 'Push Up Bar', newPath: '/photos/Push Up bar.jpeg' },
-  { title: 'Specialized BMX', newPath: '/photos/Specialized BMX.jpeg' },
-  { title: 'Steam Vacuum', newPath: '/photos/Steam Vacuum.jpeg' },
+  { title: 'Finska Game', newPath: '/photos/Finska_Game.jpeg' },
+  { title: 'High Table', newPath: '/photos/High_Table.jpeg' },
+  { title: 'Philips Sodastream', newPath: '/photos/Phillips_Sodastream.jpeg' },
+  { title: 'Push Up Bar', newPath: '/photos/Push_Up_bar.jpeg' },
+  { title: 'Specialized BMX', newPath: '/photos/Specialized_BMX.jpeg' },
+  { title: 'Steam Vacuum', newPath: '/photos/Steam_Vacuum.jpeg' },
   { title: 'Surfboards', newPath: '/photos/Surfboards.jpeg' },
-  { title: 'Townie Bike', newPath: '/photos/Townie Bike.jpeg' },
-  { title: 'Viper Bar', newPath: '/photos/Viper Bar.jpeg' }
+  { title: 'Townie Bike', newPath: '/photos/Townie_Bike.jpeg' },
+  { title: 'Viper Bar', newPath: '/photos/Viper_Bar.jpeg' }
 ];
 
 async function fixImagePaths() {
