@@ -8,6 +8,7 @@ interface ImageGalleryProps {
   title: string;
   sold?: boolean;
   availableDate?: string | null;
+  price: number;
 }
 
 export default function ImageGallery({
@@ -15,9 +16,11 @@ export default function ImageGallery({
   title,
   sold,
   availableDate,
+  price,
 }: ImageGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const hasMultipleImages = images.length > 1;
+  const isFree = price === 0;
 
   const isAvailableSoon = availableDate && new Date(availableDate) > new Date();
   const formattedAvailableDate = availableDate
@@ -40,9 +43,16 @@ export default function ImageGallery({
           priority={currentIndex === 0}
         />
 
-        {/* Availability Badge - Top Left */}
+        {/* FREE Badge - Top Left */}
+        {isFree && (
+          <div className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10 animate-pulse">
+            FREE
+          </div>
+        )}
+
+        {/* Availability Badge - Top Left (below FREE badge if both present) */}
         {isAvailableSoon && (
-          <div className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10">
+          <div className={`absolute ${isFree ? 'top-12' : 'top-3'} left-3 bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10`}>
             Available {formattedAvailableDate}
           </div>
         )}

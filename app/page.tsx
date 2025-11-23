@@ -62,17 +62,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2 uppercase">
-              Super Garage Sale
+              The Great Garage Haggle
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 font-medium">
-              Great stuff, Great Prices
+              Great stuff for sale and for free - make an offer online
             </p>
           </div>
         </div>
       </header>
 
       {/* Contact & Info Banner - Reduced height */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white pb-6">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {/* Location */}
@@ -109,17 +109,13 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Moving Notice Banner */}
-      <div className="bg-orange-500 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-xl">📦</span>
-            <p className="text-sm sm:text-base font-semibold text-center">
-              We are moving out on 21 December so some items not available until the day before
-            </p>
+          {/* Moving Notice Badge - Inside Header */}
+          <div className="flex justify-center mt-6">
+            <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg inline-flex items-center gap-2">
+              <span className="text-lg">📦</span>
+              <span>We are moving out on 21 December so some items not available until the day before</span>
+            </div>
           </div>
         </div>
       </div>
