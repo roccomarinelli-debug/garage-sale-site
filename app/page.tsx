@@ -56,23 +56,35 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-green-50 relative overflow-x-hidden">
+      {/* Snowflakes decoration */}
+      <div className="fixed inset-0 pointer-events-none z-0" style={{background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.3) 0%, transparent 2%), radial-gradient(circle at 60% 30%, rgba(255,255,255,0.3) 0%, transparent 2%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3) 0%, transparent 2%)', backgroundSize: '200px 200px'}}>
+      </div>
+
       {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-10">
+      <header className="bg-gradient-to-r from-red-600 via-green-600 to-red-600 shadow-md sticky top-0 z-10 relative">
+        {/* Tinsel effect */}
+        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-400 via-red-500 to-green-500 opacity-60"></div>
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2 uppercase">
-              The Great Garage Haggle
+          <div className="text-center relative">
+            {/* Baubles decoration */}
+            <div className="absolute -top-2 left-10 w-8 h-8 bg-red-500 rounded-full shadow-lg animate-bounce" style={{animationDuration: '3s'}}></div>
+            <div className="absolute -top-2 right-10 w-6 h-6 bg-green-500 rounded-full shadow-lg animate-bounce" style={{animationDuration: '2.5s', animationDelay: '0.5s'}}></div>
+            <div className="absolute top-4 left-32 w-5 h-5 bg-yellow-400 rounded-full shadow-lg animate-bounce" style={{animationDuration: '2s', animationDelay: '1s'}}></div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2 uppercase drop-shadow-lg">
+              🎄 The Great Garage Haggle 🎁
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 font-medium">
+            <p className="text-lg sm:text-xl text-white font-medium drop-shadow">
               Great stuff for sale and for free - make an offer online
             </p>
+            <div className="text-sm text-red-100 mt-1">✨ Christmas Sale Special ✨</div>
           </div>
         </div>
       </header>
 
-      {/* Contact & Info Banner - Reduced height */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white pb-6">
+      {/* Contact & Info Banner */}
+      <div className="bg-gradient-to-r from-green-700 via-red-700 to-green-700 text-white pb-6 relative">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {/* Location */}
@@ -112,9 +124,10 @@ export default function Home() {
 
           {/* Moving Notice Badge - Inside Header */}
           <div className="flex justify-center mt-6">
-            <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg inline-flex items-center gap-2">
-              <span className="text-lg">📦</span>
-              <span>We are moving out on 21 December so some items not available until the day before</span>
+            <div className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg inline-flex items-center gap-2 border-2 border-yellow-300">
+              <span className="text-lg">🎅</span>
+              <span>Moving out on 21 December - some items not available until the day before</span>
+              <span className="text-lg">🎄</span>
             </div>
           </div>
         </div>

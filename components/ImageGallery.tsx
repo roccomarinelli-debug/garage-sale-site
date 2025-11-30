@@ -21,6 +21,7 @@ export default function ImageGallery({
   const [currentIndex, setCurrentIndex] = useState(0);
   const hasMultipleImages = images.length > 1;
   const isFree = price === 0;
+  const isPlaceholder = images[0]?.includes('placeholder');
 
   const isAvailableSoon = availableDate && new Date(availableDate) > new Date();
   const formattedAvailableDate = availableDate
@@ -43,15 +44,24 @@ export default function ImageGallery({
           priority={currentIndex === 0}
         />
 
+        {/* COMING SOON Badge - Center (for placeholder items) */}
+        {isPlaceholder && (
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-bold shadow-2xl">
+              COMING SOON
+            </div>
+          </div>
+        )}
+
         {/* FREE Badge - Top Left */}
-        {isFree && (
+        {isFree && !isPlaceholder && (
           <div className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10 animate-pulse">
             FREE
           </div>
         )}
 
         {/* Availability Badge - Top Left (below FREE badge if both present) */}
-        {isAvailableSoon && (
+        {isAvailableSoon && !isPlaceholder && (
           <div className={`absolute ${isFree ? 'top-12' : 'top-3'} left-3 bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg z-10`}>
             Available {formattedAvailableDate}
           </div>
