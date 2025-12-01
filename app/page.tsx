@@ -61,68 +61,43 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none z-0" style={{background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.3) 0%, transparent 2%), radial-gradient(circle at 60% 30%, rgba(255,255,255,0.3) 0%, transparent 2%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3) 0%, transparent 2%)', backgroundSize: '200px 200px'}}>
       </div>
 
-      {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-green-600 mb-2 uppercase">
-              🎄 XMAS GARAGE SALE 🎁
+      {/* Header with gradient background */}
+      <header className="bg-gradient-to-r from-red-600 to-green-600 shadow-md sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 uppercase flex items-center justify-center gap-2">
+              <span className="text-4xl">🎄</span>
+              XMAS GARAGE SALE
+              <span className="relative inline-block">
+                {/* Wrapped gift effect */}
+                <span className="absolute inset-0 bg-red-500 rounded" style={{transform: 'scale(1.3)', zIndex: -1}}></span>
+                <span className="absolute inset-0 bg-yellow-400" style={{width: '20%', left: '40%', transform: 'scale(1.3)', zIndex: 0}}></span>
+                <span className="text-4xl relative z-10">🎁</span>
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 font-medium">
-              Great stuff for sale and for free - make an offer online
-            </p>
+          </div>
+
+          {/* Compact info bar */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 text-white text-xs">
+            <a href="https://maps.google.com/?q=5+Armstrong+Street+Suffolk+VIC" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1 hover:text-red-100">
+              <span>📍</span>
+              <span className="font-medium">5 Armstrong St, Suffolk</span>
+            </a>
+            <div className="flex items-center justify-center gap-1">
+              <span>🕒</span>
+              <span className="font-medium">M-F 9-5, Sat 9-12</span>
+            </div>
+            <a href="tel:0490038888" className="flex items-center justify-center gap-1 hover:text-red-100">
+              <span>📞</span>
+              <span className="font-semibold">0490 038 888</span>
+            </a>
+            <div className="flex items-center justify-center gap-1 col-span-2 lg:col-span-1">
+              <span>📦</span>
+              <span className="font-medium">Moving 21 Dec</span>
+            </div>
           </div>
         </div>
       </header>
-
-      {/* Contact & Info Banner */}
-      <div className="bg-gradient-to-r from-red-600 to-green-600 text-white pb-6">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-            {/* Location */}
-            <div className="flex flex-col items-center">
-              <div className="text-3xl mb-2">📍</div>
-              <a
-                href="https://maps.google.com/?q=5+Armstrong+Street+Suffolk+VIC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-blue-100 transition-colors text-sm font-medium"
-              >
-                5 Armstrong Street, Suffolk
-              </a>
-            </div>
-
-            {/* Hours */}
-            <div className="flex flex-col items-center">
-              <div className="text-3xl mb-2">🕒</div>
-              <div className="text-sm">
-                <p className="text-white font-medium">Mon-Fri 9am-5pm</p>
-                <p className="text-white font-medium">Sat 9am-12pm</p>
-                <p className="text-blue-100 text-xs mt-1">Call ahead for drop ins at other times</p>
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div className="flex flex-col items-center">
-              <div className="text-3xl mb-2">📞</div>
-              <a
-                href="tel:0490038888"
-                className="text-white font-semibold text-lg hover:text-blue-100 transition-colors"
-              >
-                0490 038 888
-              </a>
-            </div>
-          </div>
-
-          {/* Moving Notice Badge */}
-          <div className="flex justify-center mt-6">
-            <div className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg inline-flex items-center gap-2">
-              <span className="text-lg">📦</span>
-              <span>Moving out on 21 December - some items not available until the day before</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <main className="max-w-7xl mx-auto px-4 pt-4 pb-8 sm:px-6 lg:px-8">
         {/* Category Filter */}
