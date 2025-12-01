@@ -70,7 +70,7 @@ export default function Home() {
               XMAS GARAGE SALE
               <span className="text-4xl">🎁</span>
             </h1>
-            <p className="text-sm text-white/90">Great stuff for sale and for free - make an offer online</p>
+            <p className="text-sm text-white/90">Stuff for sale. Stuff for free. All good stuff.</p>
           </div>
 
           {/* Compact info bar */}
