@@ -68,13 +68,9 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 uppercase flex items-center justify-center gap-2">
               <span className="text-4xl">🎄</span>
               XMAS GARAGE SALE
-              <span className="relative inline-block">
-                {/* Wrapped gift effect */}
-                <span className="absolute inset-0 bg-red-500 rounded" style={{transform: 'scale(1.3)', zIndex: -1}}></span>
-                <span className="absolute inset-0 bg-yellow-400" style={{width: '20%', left: '40%', transform: 'scale(1.3)', zIndex: 0}}></span>
-                <span className="text-4xl relative z-10">🎁</span>
-              </span>
+              <span className="text-4xl">🎁</span>
             </h1>
+            <p className="text-sm text-white/90">Great stuff for sale and for free - make an offer online</p>
           </div>
 
           {/* Compact info bar */}
@@ -93,7 +89,7 @@ export default function Home() {
             </a>
             <div className="flex items-center justify-center gap-1 col-span-2 lg:col-span-1">
               <span>📦</span>
-              <span className="font-medium">Moving 21 Dec</span>
+              <span className="font-medium">Moving 21 Dec - some items unavailable until day before</span>
             </div>
           </div>
         </div>
