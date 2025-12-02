@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { Listing } from '@/types/listing';
+import { trackListingClick } from '@/lib/analytics';
 import ImageGallery from './ImageGallery';
 
 interface ListingCardProps {
@@ -108,6 +109,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackListingClick(listing.id, listing.title)}
           className={`block w-full text-center py-3 rounded-lg font-semibold transition-all uppercase ${
             isPlaceholder
               ? 'bg-blue-500 hover:bg-blue-600 text-white'

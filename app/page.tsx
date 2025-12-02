@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { trackPageView } from '@/lib/analytics';
 import type { Listing } from '@/types/listing';
 import ListingCard from '@/components/ListingCard';
 import CategoryFilter from '@/components/CategoryFilter';
@@ -15,6 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchListings();
+    trackPageView(); // Track page views
   }, []);
 
   useEffect(() => {

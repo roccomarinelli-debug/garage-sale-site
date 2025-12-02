@@ -39,11 +39,18 @@ export default function PosterPage() {
              overflow: 'hidden'
            }}>
 
-        {/* Purple Gradient Background */}
+        {/* Christmas Gradient Background */}
         <div className="absolute inset-0"
              style={{
-               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+               background: 'linear-gradient(135deg, #dc2626 0%, #16a34a 50%, #dc2626 100%)',
              }}>
+          {/* Snowflake pattern overlay */}
+          <div className="absolute inset-0 opacity-10"
+               style={{
+                 backgroundImage: 'radial-gradient(circle, white 2px, transparent 2px)',
+                 backgroundSize: '50px 50px'
+               }}>
+          </div>
         </div>
 
         {/* Content */}
@@ -51,20 +58,22 @@ export default function PosterPage() {
 
           {/* Header */}
           <div className="text-center mb-6">
-            <h1 className="text-6xl font-black text-white mb-3 tracking-tight"
+            <h1 className="text-6xl font-black text-white mb-3 tracking-tight flex items-center justify-center gap-4"
                 style={{
                   fontFamily: '"Bebas Neue", "Impact", sans-serif',
                   textShadow: '4px 4px 8px rgba(0,0,0,0.3)',
                   letterSpacing: '0.05em'
                 }}>
-              SUPER GARAGE SALE
+              <span className="text-7xl">🎄</span>
+              XMAS GARAGE SALE
+              <span className="text-7xl">🎁</span>
             </h1>
             <p className="text-2xl font-bold text-white"
                style={{
                  fontFamily: '"Montserrat", sans-serif',
                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                }}>
-              Moving Overseas - Great Stuff on Offer!
+              Stuff for sale. Stuff for free. All good stuff.
             </p>
           </div>
 
@@ -119,10 +128,10 @@ export default function PosterPage() {
             )}
 
             {/* QR Code Container */}
-            <div className="relative z-20 bg-white p-6 rounded-3xl shadow-2xl">
-              <h2 className="text-center text-purple-900 font-black text-xl mb-4"
+            <div className="relative z-20 bg-white p-6 rounded-3xl shadow-2xl border-4 border-red-600">
+              <h2 className="text-center text-red-700 font-black text-xl mb-4"
                   style={{fontFamily: '"Montserrat", sans-serif', letterSpacing: '0.05em'}}>
-                SCAN TO SEE ALL THE<br/>GREAT STUFF FOR SALE
+                SCAN FOR<br/>CHRISTMAS BARGAINS!
               </h2>
               <div>
                 <img
@@ -155,9 +164,9 @@ export default function PosterPage() {
       <div className="text-center mt-8 print:hidden">
         <button
           onClick={() => window.print()}
-          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition-colors"
+          className="bg-red-600 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition-colors"
         >
-          🖨️ Print Poster (A4)
+          🎄 Print Christmas Poster (A4)
         </button>
         <p className="mt-4 text-gray-600">
           Or press Cmd+P (Mac) / Ctrl+P (Windows) to print
@@ -168,6 +177,13 @@ export default function PosterPage() {
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap');
 
+        /* Force background colors to print */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          color-adjust: exact !important;
+        }
+
         @media print {
           body {
             margin: 0;
@@ -176,6 +192,12 @@ export default function PosterPage() {
           @page {
             size: A4;
             margin: 0;
+          }
+
+          /* Ensure backgrounds print */
+          div, section {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
           }
         }
       `}</style>
