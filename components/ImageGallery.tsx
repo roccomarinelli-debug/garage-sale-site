@@ -67,12 +67,22 @@ export default function ImageGallery({
           </div>
         )}
 
-        {/* Sold Overlay */}
+        {/* Sold Diagonal Sash */}
         {sold && (
-          <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
-            <span className="text-white text-2xl font-bold px-6 py-3 bg-red-600 rounded-lg shadow-xl">
-              SOLD
-            </span>
+          <div className="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+            {/* Diagonal ribbon from top-left to bottom-right */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div
+                className="absolute top-[15%] -left-[10%] w-[120%] bg-red-600 shadow-2xl transform -rotate-45 py-4 flex items-center justify-center"
+                style={{ transformOrigin: 'center' }}
+              >
+                <span className="text-white text-3xl md:text-4xl font-black tracking-widest uppercase">
+                  SOLD
+                </span>
+              </div>
+            </div>
+            {/* Semi-transparent overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
           </div>
         )}
 
